@@ -36,10 +36,11 @@ def plot_clusters(all_samples, centroids, n_samples_per_cluster):
     plt.show()
 
 
-def choose_random_centroids(samples, n_clusters):
+def choose_random_centroids(samples, n_clusters,seed):
     # Step 0: Initialisation: Select `n_clusters` number of random points
+    np.random.seed(seed)
     n_samples = tf.shape(samples)[0]
-    random_indices = tf.random_shuffle(tf.range(0, n_samples))
+    random_indices = tf.random_shuffle(tf.range(0, n_samples),seed=seed)
     begin = [0,]
     size = [n_clusters,]
     size[0] = n_clusters
