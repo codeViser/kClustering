@@ -58,7 +58,7 @@ embiggen_factor = 70
 
 
 data_centroids, samples = create_samples(n_clusters, n_samples_per_cluster, n_features, embiggen_factor, seed)
-initial_centroids = choose_random_centroids(samples, n_clusters,seed*0)
+initial_centroids = choose_random_centroids(samples, n_clusters,seed)
 x=tf.Variable(initial_centroids,name="x")
 # x=tf.identity(initial_centroids)
 nearest_indices = assign_to_nearest(samples, x)
