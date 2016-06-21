@@ -1,2 +1,2 @@
 # kClustering
-This is a running model under development for k-means clustering.
+This is a running model developed for k-means clustering.
